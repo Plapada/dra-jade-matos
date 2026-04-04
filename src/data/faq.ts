@@ -15,19 +15,29 @@ export const faqItems = [
       "Trabalho com todos os métodos contraceptivos disponíveis: pílula, DIU (hormonal e de cobre), implante subdérmico, anel vaginal, injetáveis e outros. Na consulta, avaliamos juntas qual é o melhor método para o seu perfil, considerando saúde, rotina e preferências pessoais.",
   },
   {
-    question: "Quando devo começar o pré-natal?",
+    question: "O que é SOP e quais são os sintomas?",
     answer:
-      "O pré-natal deve ser iniciado assim que a gravidez for confirmada, idealmente no primeiro trimestre. As consultas são mensais no início, tornando-se mais frequentes no terceiro trimestre. O acompanhamento precoce é fundamental para uma gestação saudável.",
+      "A Síndrome dos Ovários Policísticos (SOP) é um distúrbio hormonal comum que pode causar ciclos menstruais irregulares, acne, queda de cabelo, ganho de peso e dificuldade para engravidar. O diagnóstico é feito com exames de sangue e ultrassom, e o tratamento é individualizado conforme os sintomas e objetivos de cada paciente.",
   },
   {
-    question: "A consulta é confidencial?",
+    question: "Quando devo me preocupar com cólicas menstruais?",
     answer:
-      "Absolutamente. Tudo o que é conversado e examinado durante a consulta é protegido pelo sigilo médico. Você pode se sentir à vontade para compartilhar suas dúvidas, preocupações e queixas sem nenhum julgamento. Sua privacidade é minha prioridade.",
+      "Cólicas leves são comuns durante a menstruação, mas quando a dor é intensa a ponto de atrapalhar suas atividades do dia a dia, causar náuseas ou não melhorar com analgésicos, é importante investigar. Pode ser sinal de endometriose, miomas ou adenomiose. Procure uma avaliação ginecológica para identificar a causa e tratar adequadamente.",
   },
   {
     question: "Quais exames preventivos são recomendados?",
     answer:
       "Os principais exames incluem Papanicolau (rastreamento de câncer de colo de útero), ultrassonografia pélvica e transvaginal, mamografia (a partir dos 40 anos ou conforme indicação), exames de sangue hormonais e sorologias. Na consulta, defino o protocolo ideal para cada paciente.",
+  },
+  {
+    question: "O que causa corrimento vaginal e quando devo procurar ajuda?",
+    answer:
+      "O corrimento vaginal fisiológico é transparente ou esbranquiçado, sem cheiro forte. Quando muda de cor (amarelo, verde, cinza), tem odor desagradável, causa coceira ou ardor, pode indicar infecções como candidíase, vaginose bacteriana ou ISTs. Nesses casos, procure atendimento ginecológico para diagnóstico e tratamento corretos — evite automedicação.",
+  },
+  {
+    question: "A partir de que idade devo fazer mamografia?",
+    answer:
+      "A recomendação geral é iniciar a mamografia anual a partir dos 40 anos. Porém, mulheres com histórico familiar de câncer de mama devem começar o rastreamento mais cedo, geralmente 10 anos antes da idade em que o familiar foi diagnosticado. Na consulta, avaliamos seu risco individual e definimos o melhor protocolo de acompanhamento.",
   },
   {
     question: "Você atende por convênio ou particular?",

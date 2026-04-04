@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef, type ReactNode } from "react";
 
 interface FadeInProps {
   children: ReactNode;
@@ -14,33 +14,33 @@ interface FadeInProps {
 }
 
 const directionMap = {
-  up: { y: 40, x: 0 },
-  down: { y: -40, x: 0 },
-  left: { x: 40, y: 0 },
-  right: { x: -40, y: 0 },
+  up: { y: 60, x: 0 },
+  down: { y: -60, x: 0 },
+  left: { x: 60, y: 0 },
+  right: { x: -60, y: 0 },
   none: { x: 0, y: 0 },
 };
 
 export function FadeIn({
   children,
   delay = 0,
-  duration = 0.6,
+  duration = 0.7,
   direction = "up",
   className,
-  once = true,
-  amount = 0.3,
+  once = false,
+  amount = 0.2,
 }: FadeInProps) {
   const offset = directionMap[direction];
 
   return (
     <motion.div
-      initial={{ opacity: 0, ...offset }}
-      whileInView={{ opacity: 1, x: 0, y: 0 }}
+      initial={{ opacity: 0, ...offset, filter: "blur(6px)" }}
+      whileInView={{ opacity: 1, x: 0, y: 0, filter: "blur(0px)" }}
       viewport={{ once, amount }}
       transition={{
         duration,
         delay,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: [0.22, 1, 0.36, 1],
       }}
       className={className}
     >

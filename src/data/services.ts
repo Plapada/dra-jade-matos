@@ -1,6 +1,6 @@
 import {
   Heart,
-  Baby,
+  Droplets,
   Scissors,
   ShieldCheck,
   Flower2,
@@ -17,10 +17,10 @@ export const services = [
       "Avaliação completa da saúde íntima feminina com atendimento humanizado, acolhedor e sem julgamentos.",
   },
   {
-    icon: Baby,
-    title: "Pré-natal",
+    icon: Droplets,
+    title: "Saúde Íntima",
     description:
-      "Acompanhamento gestacional personalizado, cuidando de você e do seu bebê em cada fase da gravidez.",
+      "Diagnóstico e tratamento de infecções, corrimentos, dor pélvica e cuidados com a saúde íntima feminina.",
   },
   {
     icon: Scissors,
