@@ -44,11 +44,17 @@ export function CtaSection() {
           sizes="600px"
           style={{ filter: "brightness(0.32) contrast(1.1)" }}
         />
+        {/* Dissolve inferior */}
         <div className="absolute inset-0" style={{
-          background: "linear-gradient(to top, #090e1a 0%, rgba(9,14,26,0.8) 20%, transparent 50%)"
+          background: "linear-gradient(to top, #090e1a 0%, rgba(9,14,26,0.9) 15%, rgba(9,14,26,0.5) 35%, transparent 55%)"
         }} />
+        {/* Dissolve lateral — mais agressivo */}
         <div className="absolute inset-0" style={{
-          background: "linear-gradient(to right, #090e1a 0%, transparent 15%, transparent 85%, #090e1a 100%)"
+          background: "linear-gradient(to right, #090e1a 0%, rgba(9,14,26,0.7) 10%, transparent 25%, transparent 75%, rgba(9,14,26,0.7) 90%, #090e1a 100%)"
+        }} />
+        {/* Dissolve superior */}
+        <div className="absolute inset-0" style={{
+          background: "linear-gradient(to bottom, #090e1a 0%, rgba(9,14,26,0.6) 10%, transparent 30%)"
         }} />
       </motion.div>
 

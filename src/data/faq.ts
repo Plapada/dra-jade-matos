@@ -42,7 +42,7 @@ export const faqItems = [
   {
     question: "Você atende por convênio ou particular?",
     answer:
-      "Atendo de forma particular para oferecer um atendimento com mais tempo, atenção e qualidade. Cada consulta tem duração de aproximadamente 40-60 minutos, garantindo que todas as suas dúvidas sejam respondidas e seu cuidado seja completo.",
+      "Atendo de forma particular para oferecer um atendimento com mais tempo, atenção e qualidade, garantindo que todas as suas dúvidas sejam respondidas e seu cuidado seja completo.",
   },
   {
     question: "Como faço para agendar uma consulta?",
