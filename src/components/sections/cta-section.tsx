@@ -55,13 +55,6 @@ export function CtaSection() {
       {/* Content — posicionado no topo para liberar espaço para a foto */}
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <FadeIn>
-          <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-jade-300 mb-4 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer" />
-            <span className="relative z-10">Agende sua consulta</span>
-          </span>
-        </FadeIn>
-
-        <FadeIn delay={0.1}>
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight">
             Cuide de você.
             <br />
