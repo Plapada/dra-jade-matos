@@ -42,7 +42,7 @@ export function CtaSection() {
           fill
           className="object-contain object-bottom"
           sizes="600px"
-          style={{ filter: "brightness(0.32) contrast(1.1)" }}
+          style={{ filter: "brightness(0.18) contrast(1.05) saturate(0.6)" }}
         />
         {/* Dissolve inferior */}
         <div className="absolute inset-0" style={{
