@@ -16,7 +16,7 @@ export function CtaSection() {
   const y = useTransform(scrollYProgress, [0, 1], [-20, 20]);
 
   return (
-    <section ref={ref} className="relative py-32 lg:py-40 overflow-hidden bg-[#090e1a]">
+    <section ref={ref} className="relative pt-24 lg:pt-32 pb-56 lg:pb-72 overflow-hidden bg-[#090e1a]">
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#090e1a] to-transparent pointer-events-none" />
       <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#090e1a] to-transparent pointer-events-none" />
 
@@ -52,8 +52,8 @@ export function CtaSection() {
 
       <div className="absolute inset-0 grain" />
 
-      {/* Content */}
-      <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Content — posicionado no topo para liberar espaço para a foto */}
+      <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-32 lg:mb-40">
         <FadeIn>
           <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-jade-300 mb-4 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer" />
