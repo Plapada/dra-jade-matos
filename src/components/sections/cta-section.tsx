@@ -20,16 +20,9 @@ export function CtaSection() {
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#090e1a] to-transparent pointer-events-none" />
       <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#090e1a] to-transparent pointer-events-none" />
 
-      {/* Jade glow */}
-      <div className="absolute inset-0 pointer-events-none" style={{
-        background: "radial-gradient(ellipse 60% 70% at 50% 80%, rgba(42,157,110,0.12) 0%, transparent 70%)"
-      }} />
-
       {/* Floating particles — CSS only */}
-      <div className="absolute top-[20%] left-[20%] w-1.5 h-1.5 rounded-full bg-jade-400/20 animate-float" />
-      <div className="absolute top-[35%] right-[22%] w-1 h-1 rounded-full bg-jade-300/15 animate-float-delayed" />
-      <div className="absolute top-[60%] left-[15%] w-1 h-1 rounded-full bg-jade-400/20 animate-float" />
-      <div className="absolute top-[25%] right-[18%] w-1.5 h-1.5 rounded-full bg-jade-300/15 animate-float-delayed" />
+      <div className="absolute top-[20%] left-[20%] w-1.5 h-1.5 rounded-full bg-jade-400/15 animate-float" />
+      <div className="absolute top-[35%] right-[22%] w-1 h-1 rounded-full bg-jade-300/10 animate-float-delayed" />
 
       {/* Doctor cutout */}
       <motion.div
