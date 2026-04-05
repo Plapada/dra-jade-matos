@@ -37,7 +37,7 @@ export function CtaSection() {
           sizes="600px"
         />
         {/* Overlay com a cor exata do fundo — iguala o tom */}
-        <div className="absolute inset-0" style={{ backgroundColor: "rgba(9,14,26,0.78)" }} />
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(9,14,26,0.72)" }} />
         {/* Dissolve nas bordas para sumir completamente */}
         <div className="absolute inset-0" style={{
           background: "linear-gradient(to top, #090e1a 0%, transparent 40%)"
