@@ -42,19 +42,18 @@ export function CtaSection() {
           fill
           className="object-contain object-bottom"
           sizes="600px"
-          style={{ filter: "brightness(0.18) contrast(1.05) saturate(0.6)" }}
         />
-        {/* Dissolve inferior */}
+        {/* Overlay com a cor exata do fundo — iguala o tom */}
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(9,14,26,0.78)" }} />
+        {/* Dissolve nas bordas para sumir completamente */}
         <div className="absolute inset-0" style={{
-          background: "linear-gradient(to top, #090e1a 0%, rgba(9,14,26,0.9) 15%, rgba(9,14,26,0.5) 35%, transparent 55%)"
+          background: "linear-gradient(to top, #090e1a 0%, transparent 40%)"
         }} />
-        {/* Dissolve lateral — mais agressivo */}
         <div className="absolute inset-0" style={{
-          background: "linear-gradient(to right, #090e1a 0%, rgba(9,14,26,0.7) 10%, transparent 25%, transparent 75%, rgba(9,14,26,0.7) 90%, #090e1a 100%)"
+          background: "linear-gradient(to right, #090e1a 0%, transparent 20%, transparent 80%, #090e1a 100%)"
         }} />
-        {/* Dissolve superior */}
         <div className="absolute inset-0" style={{
-          background: "linear-gradient(to bottom, #090e1a 0%, rgba(9,14,26,0.6) 10%, transparent 30%)"
+          background: "linear-gradient(to bottom, #090e1a 0%, transparent 25%)"
         }} />
       </motion.div>
 
