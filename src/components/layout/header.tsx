@@ -50,7 +50,7 @@ export function Header() {
             <motion.a
               href="#"
               whileHover={{ scale: 1.02 }}
-              className="relative h-12 w-36"
+              className="relative h-14 w-44"
             >
               <Image
                 src="/images/logo-jade.png"
