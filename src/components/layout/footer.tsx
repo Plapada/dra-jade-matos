@@ -14,7 +14,7 @@ export function Footer() {
           <div className="lg:col-span-1">
             <div className="mb-4 relative h-14 w-40">
               <Image
-                src="/images/logo.png"
+                src="/images/logo-light.png"
                 alt="Dra. Jade Matos - Ginecologista"
                 fill
                 className="object-contain object-left"

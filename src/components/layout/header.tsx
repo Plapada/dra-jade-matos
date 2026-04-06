@@ -53,11 +53,10 @@ export function Header() {
               className="relative h-12 w-36"
             >
               <Image
-                src="/images/logo.png"
+                src="/images/logo-jade.png"
                 alt="Dra. Jade Matos - Ginecologista"
                 fill
                 className="object-contain"
-                style={{ filter: "invert(1) sepia(1) saturate(3) hue-rotate(115deg) brightness(0.45)" }}
                 sizes="144px"
                 priority
               />
