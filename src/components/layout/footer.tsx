@@ -1,6 +1,7 @@
 "use client";
 
 import { MapPin, Phone } from "lucide-react";
+import Image from "next/image";
 import { SITE_CONFIG, LOCATIONS, NAV_LINKS } from "@/lib/constants";
 
 export function Footer() {
@@ -11,13 +12,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="mb-4">
-              <span className="font-serif text-2xl font-bold">
-                dra. jade matos
-              </span>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-jade-400 mt-1">
-                ginecologista
-              </p>
+            <div className="mb-4 relative h-14 w-40">
+              <Image
+                src="/images/logo.png"
+                alt="Dra. Jade Matos - Ginecologista"
+                fill
+                className="object-contain object-left"
+                sizes="160px"
+              />
             </div>
             <p className="text-white/50 text-sm leading-relaxed mb-6">
               Cuidado ginecológico humanizado e acolhedor para todas as fases

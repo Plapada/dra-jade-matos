@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { NAV_LINKS, WHATSAPP_URL } from "@/lib/constants";
 import { MagneticButton } from "@/components/shared/magnetic-button";
@@ -45,18 +46,21 @@ export function Header() {
           )}
         >
           <div className="flex items-center justify-between">
-            {/* Logo with hover animation */}
+            {/* Logo */}
             <motion.a
               href="#"
               whileHover={{ scale: 1.02 }}
-              className="flex flex-col"
+              className="relative h-12 w-36"
             >
-              <span className="font-serif text-xl font-bold tracking-tight text-jade-900">
-                dra. jade matos
-              </span>
-              <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-jade-600">
-                ginecologista
-              </span>
+              <Image
+                src="/images/logo.png"
+                alt="Dra. Jade Matos - Ginecologista"
+                fill
+                className="object-contain"
+                style={{ filter: "invert(1) sepia(1) saturate(3) hue-rotate(115deg) brightness(0.45)" }}
+                sizes="144px"
+                priority
+              />
             </motion.a>
 
             {/* Desktop Nav with animated underlines */}
