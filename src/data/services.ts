@@ -5,6 +5,7 @@ export const services = [
     icon: Stethoscope,
     title: "Consulta Ginecológica",
     image: "/images/IMG_2168.jpg",
+    imagePosition: "object-top",
     description:
       "Avaliação completa da saúde feminina em todas as fases da vida, com escuta atenta e sem julgamentos. Da primeira consulta da adolescente à transição da menopausa.",
     bullets: [
@@ -18,6 +19,7 @@ export const services = [
     icon: Activity,
     title: "Cirurgia Ginecológica",
     image: "/images/IMG_2354.jpg",
+    imagePosition: "object-top",
     description:
       "Cirurgiã com foco em técnicas minimamente invasivas. Histeroscopia e laparoscopia para preservar o máximo de tecido saudável e acelerar sua recuperação.",
     bullets: [
@@ -33,6 +35,7 @@ export const services = [
     icon: ShieldCheck,
     title: "Planejamento Familiar",
     image: "/images/IMG_2279.jpg",
+    imagePosition: "object-center",
     description:
       "Orientação sobre os métodos contraceptivos mais indicados para você, com respeito às suas escolhas e momento de vida. Planejamento reprodutivo consciente e seguro.",
     bullets: [
@@ -46,6 +49,7 @@ export const services = [
     icon: Video,
     title: "Consulta Online",
     image: "/images/IMG_20022.jpg",
+    imagePosition: "object-top",
     description:
       "Também realizo atendimentos particulares de forma online, para pacientes de qualquer lugar do Brasil. Mesmo cuidado acolhedor, no conforto da sua casa.",
     bullets: [

@@ -37,7 +37,7 @@ export function HeroSection() {
           src="/images/IMG_2425.jpg"
           alt="Drª Jade Matos - Ginecologista e Cirurgiã em Salvador, BA"
           fill
-          className="object-cover object-[center_top]"
+          className="object-cover object-[50%_8%]"
           priority
           sizes="58vw"
         />
