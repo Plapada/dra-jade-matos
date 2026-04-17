@@ -26,30 +26,23 @@ export function HeroSection() {
       id="inicio"
       className="relative min-h-screen flex items-end overflow-hidden"
     >
-      <div className="absolute inset-0" style={{ background: "#d6e3dd" }} />
-
-      {/* Foto à ESQUERDA com parallax */}
+      {/* Foto full-screen com parallax */}
       <motion.div
         style={{ y }}
-        className="absolute top-0 left-0 w-[58%] h-full will-change-transform"
+        className="absolute inset-0 will-change-transform"
       >
         <Image
-          src="/images/IMG_2425.jpg"
+          src="/images/expanded-image-1776470052360.png"
           alt="Drª Jade Matos - Ginecologista e Cirurgiã em Salvador, BA"
           fill
-          className="object-cover object-[50%_8%]"
+          className="object-cover object-center"
           priority
-          sizes="58vw"
+          sizes="100vw"
         />
       </motion.div>
 
-      {/* Fade da foto para o fundo (agora no lado direito da imagem) */}
-      <div
-        className="absolute top-0 bottom-0 left-[44%] w-[18%] pointer-events-none"
-        style={{
-          background: "linear-gradient(to right, transparent 0%, #d6e3dd 100%)",
-        }}
-      />
+      {/* Overlay escuro suave para legibilidade */}
+      <div className="absolute inset-0 bg-jade-950/30" />
 
       <div className="absolute inset-0 grain" />
 
@@ -63,6 +56,8 @@ export function HeroSection() {
         className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 pt-40 will-change-transform"
       >
         <div className="max-w-2xl ml-auto text-right">
+          {/* Glass card behind text */}
+          <div className="relative rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl shadow-jade-950/20 px-8 py-10 lg:px-10 lg:py-12">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 15, scale: 0.9 }}
@@ -82,13 +77,13 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="font-serif text-2xl sm:text-3xl text-jade-700 mb-4 italic"
+            className="font-serif text-2xl sm:text-3xl text-white/90 mb-4 italic"
           >
             Drª Jade Matos
           </motion.p>
 
           {/* Headline — word by word */}
-          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-jade-900 tracking-tight leading-[1.15]">
+          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.15]">
             {words.map((word, i) => (
               <motion.span
                 key={i}
@@ -110,7 +105,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.5, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-6 text-lg text-jade-700/80 leading-relaxed max-w-lg ml-auto"
+            className="mt-6 text-lg text-white/80 leading-relaxed max-w-lg ml-auto"
           >
             Atendimento com acolhimento, respeito e confiança. Cada mulher
             é única e merece um cuidado personalizado, sem pressa e sem
@@ -141,6 +136,7 @@ export function HeroSection() {
               Conheça Meus Serviços
             </MagneticButton>
           </motion.div>
+          </div>{/* fim glass card */}
         </div>
 
         {/* Floating badge */}
