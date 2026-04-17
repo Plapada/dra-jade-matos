@@ -50,14 +50,14 @@ export function Header() {
             <motion.a
               href="#"
               whileHover={{ scale: 1.02 }}
-              className="relative h-14 w-44"
+              className="relative h-20 w-60 md:h-24 md:w-72"
             >
               <Image
                 src="/images/logo-jade.png"
-                alt="Dra. Jade Matos - Ginecologista"
+                alt="Drª Jade Matos - Ginecologista"
                 fill
-                className="object-contain"
-                sizes="144px"
+                className="object-contain object-left"
+                sizes="288px"
                 priority
               />
             </motion.a>

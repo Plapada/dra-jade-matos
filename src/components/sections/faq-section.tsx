@@ -38,8 +38,8 @@ export function FaqSection() {
           <FadeIn direction="left" className="lg:col-span-2 hidden lg:block">
             <motion.div style={{ y: photoY }} className="relative aspect-[3/4] rounded-3xl overflow-hidden shadow-xl shadow-navy-900/10 sticky top-32 will-change-transform">
               <Image
-                src="/images/IMG_2279.jpg"
-                alt="Dra. Jade Matos com instrumento médico"
+                src="/images/IMG_2166.jpg"
+                alt="Drª Jade Matos - atendimento humanizado"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"
                 sizes="400px"
@@ -78,8 +78,12 @@ export function FaqSection() {
                     <AccordionTrigger className="text-left font-semibold text-navy-900 hover:text-jade-600 transition-colors text-sm py-5 [&[data-state=open]]:text-jade-600">
                       {item.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-sm text-navy-700/70 leading-relaxed pb-5">
-                      {item.answer}
+                    <AccordionContent className="text-sm text-navy-700/70 leading-relaxed pb-5 space-y-3">
+                      {item.answer.split("\n\n").map((paragraph, j) => (
+                        <p key={j} className="whitespace-pre-line">
+                          {paragraph}
+                        </p>
+                      ))}
                     </AccordionContent>
                   </AccordionItem>
                 </motion.div>

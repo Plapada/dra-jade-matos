@@ -17,7 +17,8 @@ export function HeroSection() {
   const opacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
   const textY = useTransform(scrollYProgress, [0, 1], [0, -80]);
 
-  const words = "Cuidado ginecológico humanizado para todas as fases da sua vida".split(" ");
+  const words =
+    "Saúde feminina em todas as fases: do cuidado preventivo ao tratamento cirúrgico.".split(" ");
 
   return (
     <section
@@ -25,36 +26,43 @@ export function HeroSection() {
       id="inicio"
       className="relative min-h-screen flex items-end overflow-hidden"
     >
-      <div className="absolute inset-0" style={{ background: "#ccd8d2" }} />
+      <div className="absolute inset-0" style={{ background: "#d6e3dd" }} />
 
-      {/* Foto com parallax — will-change para GPU */}
-      <motion.div style={{ y }} className="absolute top-0 right-0 w-[58%] h-full will-change-transform">
+      {/* Foto à ESQUERDA com parallax */}
+      <motion.div
+        style={{ y }}
+        className="absolute top-0 left-0 w-[58%] h-full will-change-transform"
+      >
         <Image
-          src="/images/IMG_2354.jpg"
-          alt="Dra. Jade Matos - Ginecologista em Salvador, BA"
+          src="/images/IMG_2425.jpg"
+          alt="Drª Jade Matos - Ginecologista e Cirurgiã em Salvador, BA"
           fill
-          className="object-cover object-[center_-100px]"
+          className="object-cover object-[center_top]"
           priority
           sizes="58vw"
         />
       </motion.div>
 
-      <div className="absolute top-0 bottom-0 left-[38%] w-[18%] pointer-events-none" style={{
-        background: "linear-gradient(to right, #ccd8d2 0%, transparent 100%)"
-      }} />
+      {/* Fade da foto para o fundo (agora no lado direito da imagem) */}
+      <div
+        className="absolute top-0 bottom-0 left-[44%] w-[18%] pointer-events-none"
+        style={{
+          background: "linear-gradient(to right, transparent 0%, #d6e3dd 100%)",
+        }}
+      />
 
       <div className="absolute inset-0 grain" />
 
-      {/* Floating elements — CSS animations, not JS */}
-      <div className="absolute top-1/4 left-[33%] w-4 h-4 rounded-full bg-jade-400/15 animate-float" />
-      <div className="absolute top-2/3 left-[8%] w-3 h-3 rounded-full bg-jade-300/20 animate-float-delayed" />
+      {/* Floating elements */}
+      <div className="absolute top-1/4 right-[33%] w-4 h-4 rounded-full bg-jade-400/15 animate-float" />
+      <div className="absolute top-2/3 right-[8%] w-3 h-3 rounded-full bg-jade-300/20 animate-float-delayed" />
 
-      {/* Content */}
+      {/* Content — agora alinhado à DIREITA */}
       <motion.div
         style={{ opacity, y: textY }}
         className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 pt-40 will-change-transform"
       >
-        <div className="max-w-2xl">
+        <div className="max-w-2xl ml-auto text-right">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 15, scale: 0.9 }}
@@ -65,12 +73,22 @@ export function HeroSection() {
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shimmer" />
             <span className="w-2 h-2 rounded-full bg-jade-500 animate-pulse-soft" />
             <span className="text-xs font-semibold text-jade-700 uppercase tracking-wider relative z-10">
-              Ginecologista em Salvador
+              Ginecologista e Cirurgiã em Salvador
             </span>
           </motion.div>
 
+          {/* Nome — destaque acima do título */}
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="font-serif text-2xl sm:text-3xl text-jade-700 mb-4 italic"
+          >
+            Drª Jade Matos
+          </motion.p>
+
           {/* Headline — word by word */}
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#143f30] tracking-tight leading-[1.1]">
+          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-jade-900 tracking-tight leading-[1.15]">
             {words.map((word, i) => (
               <motion.span
                 key={i}
@@ -91,8 +109,8 @@ export function HeroSection() {
           <motion.p
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-6 text-lg text-[#1a6347]/70 leading-relaxed max-w-lg"
+            transition={{ delay: 1.5, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-6 text-lg text-jade-700/80 leading-relaxed max-w-lg ml-auto"
           >
             Atendimento com acolhimento, respeito e confiança. Cada mulher
             é única e merece um cuidado personalizado, sem pressa e sem
@@ -103,8 +121,8 @@ export function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.5, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-8 flex flex-col sm:flex-row gap-4"
+            transition={{ delay: 1.8, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-8 flex flex-col sm:flex-row gap-4 sm:justify-end"
           >
             <MagneticButton
               as="a"
@@ -118,7 +136,7 @@ export function HeroSection() {
             <MagneticButton
               as="a"
               href="#especialidades"
-              className="items-center justify-center gap-2 px-8 py-4 bg-white/70 backdrop-blur-sm border border-jade-200/50 text-[#1a6347] font-semibold rounded-full hover:bg-white hover:border-jade-300 transition-all duration-300"
+              className="items-center justify-center gap-2 px-8 py-4 bg-white/70 backdrop-blur-sm border border-jade-200/50 text-jade-700 font-semibold rounded-full hover:bg-white hover:border-jade-300 transition-all duration-300"
             >
               Conheça Meus Serviços
             </MagneticButton>
@@ -127,16 +145,16 @@ export function HeroSection() {
 
         {/* Floating badge */}
         <motion.div
-          initial={{ opacity: 0, x: 40 }}
+          initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 2, duration: 0.7 }}
-          className="absolute bottom-20 right-6 sm:right-12 glass-strong rounded-2xl px-4 py-3 shadow-lg hidden sm:block animate-float"
+          className="absolute bottom-20 left-6 sm:left-12 glass-strong rounded-2xl px-4 py-3 shadow-lg hidden sm:block animate-float"
         >
           <p className="text-xs font-semibold text-jade-800">
-            ✨ Atendimento Humanizado
+            ✨ Cirurgia Ginecológica
           </p>
-          <p className="text-[10px] text-jade-700/50 mt-0.5">
-            Acolhimento em cada consulta
+          <p className="text-[10px] text-jade-700/60 mt-0.5">
+            Histeroscopia e técnicas minimamente invasivas
           </p>
         </motion.div>
       </motion.div>

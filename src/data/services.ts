@@ -1,61 +1,58 @@
-import {
-  Heart,
-  Droplets,
-  Scissors,
-  ShieldCheck,
-  Flower2,
-  Stethoscope,
-  Ribbon,
-  Sun,
-} from "lucide-react";
+import { Stethoscope, Scissors, ShieldCheck, Video } from "lucide-react";
 
 export const services = [
   {
     icon: Stethoscope,
     title: "Consulta Ginecológica",
+    image: "/images/IMG_2168.jpg",
     description:
-      "Avaliação completa da saúde íntima feminina com atendimento humanizado, acolhedor e sem julgamentos.",
-  },
-  {
-    icon: Droplets,
-    title: "Saúde Íntima",
-    description:
-      "Diagnóstico e tratamento de infecções, corrimentos, dor pélvica e cuidados com a saúde íntima feminina.",
+      "Avaliação completa da saúde feminina em todas as fases da vida, com escuta atenta e sem julgamentos. Da primeira consulta da adolescente à transição da menopausa.",
+    bullets: [
+      "Adolescente",
+      "Ginecologia endócrina",
+      "Climatério e menopausa",
+      "Rotina e prevenção",
+    ],
   },
   {
     icon: Scissors,
     title: "Cirurgia Ginecológica",
+    image: "/images/IMG_2354.jpg",
     description:
-      "Procedimentos cirúrgicos minimamente invasivos com técnicas modernas e recuperação rápida.",
+      "Cirurgiã com foco em técnicas minimamente invasivas. Histeroscopia e laparoscopia para preservar o máximo de tecido saudável e acelerar sua recuperação.",
+    bullets: [
+      "Histeroscopia",
+      "Histerectomia",
+      "Miomectomia",
+      "Cistos ovarianos",
+      "Laqueadura tubária",
+      "Ninfoplastia",
+    ],
   },
   {
     icon: ShieldCheck,
     title: "Planejamento Familiar",
+    image: "/images/IMG_2279.jpg",
     description:
-      "Orientação sobre métodos contraceptivos, planejamento reprodutivo e saúde sexual com respeito às suas escolhas.",
+      "Orientação sobre os métodos contraceptivos mais indicados para você, com respeito às suas escolhas e momento de vida. Planejamento reprodutivo consciente e seguro.",
+    bullets: [
+      "Métodos contraceptivos",
+      "DIU hormonal e de cobre",
+      "Planejamento reprodutivo",
+      "Saúde sexual",
+    ],
   },
   {
-    icon: Heart,
-    title: "Saúde da Mulher",
+    icon: Video,
+    title: "Consulta Online",
+    image: "/images/IMG_20022.jpg",
     description:
-      "Cuidado integral em todas as fases da vida: adolescência, vida reprodutiva, climatério e menopausa.",
-  },
-  {
-    icon: Flower2,
-    title: "Endocrinologia Feminina",
-    description:
-      "Tratamento de distúrbios hormonais, SOP, irregularidades menstruais e reposição hormonal.",
-  },
-  {
-    icon: Ribbon,
-    title: "Prevenção de Câncer",
-    description:
-      "Rastreamento e prevenção de câncer de colo de útero e mama com exames periódicos e orientação.",
-  },
-  {
-    icon: Sun,
-    title: "Climatério e Menopausa",
-    description:
-      "Acompanhamento especializado para viver essa fase com qualidade de vida, conforto e bem-estar.",
+      "Também realizo atendimentos particulares de forma online, para pacientes de qualquer lugar do Brasil. Mesmo cuidado acolhedor, no conforto da sua casa.",
+    bullets: [
+      "Consulta particular",
+      "Atendimento em todo Brasil",
+      "Flexibilidade de horário",
+      "Acolhimento à distância",
+    ],
   },
 ] as const;

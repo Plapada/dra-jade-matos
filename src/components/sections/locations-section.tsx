@@ -1,10 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Phone, Clock } from "lucide-react";
+import { MapPin, Phone, Clock, Info } from "lucide-react";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { LOCATIONS, WHATSAPP_URL } from "@/lib/constants";
 import { MagneticButton } from "@/components/shared/magnetic-button";
+
+type Location = (typeof LOCATIONS)[number] & { phoneAlt?: string; note?: string };
 
 export function LocationsSection() {
   return (
@@ -22,7 +24,7 @@ export function LocationsSection() {
         />
 
         <div className="grid md:grid-cols-2 gap-6 mt-8">
-          {LOCATIONS.map((loc, i) => (
+          {(LOCATIONS as readonly Location[]).map((loc, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 40 }}
@@ -47,14 +49,29 @@ export function LocationsSection() {
                     <p className="text-white/50 text-sm">{loc.city}</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 hover:translate-x-1 transition-transform duration-300">
-                  <Phone className="h-5 w-5 text-jade-400 shrink-0" />
-                  <p className="text-white/80 text-sm">{loc.phone}</p>
+                <div className="flex items-start gap-3 hover:translate-x-1 transition-transform duration-300">
+                  <Phone className="h-5 w-5 text-jade-400 mt-0.5 shrink-0" />
+                  <div>
+                    <p className="text-white/80 text-sm">{loc.phone}</p>
+                    {loc.phoneAlt && (
+                      <p className="text-white/50 text-xs mt-0.5">
+                        ou {loc.phoneAlt}
+                      </p>
+                    )}
+                  </div>
                 </div>
                 <div className="flex items-center gap-3 hover:translate-x-1 transition-transform duration-300">
                   <Clock className="h-5 w-5 text-jade-400 shrink-0" />
                   <p className="text-white/80 text-sm">{loc.hours}</p>
                 </div>
+                {loc.note && (
+                  <div className="flex items-start gap-3 pt-1">
+                    <Info className="h-4 w-4 text-jade-400/70 mt-0.5 shrink-0" />
+                    <p className="text-white/60 text-xs leading-relaxed">
+                      {loc.note}
+                    </p>
+                  </div>
+                )}
               </div>
 
               <div className="rounded-xl overflow-hidden h-48 bg-navy-700/50 border border-white/5 hover:scale-[1.02] transition-transform duration-300">

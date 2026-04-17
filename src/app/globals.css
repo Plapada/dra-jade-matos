@@ -12,18 +12,18 @@
   --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
   --font-heading: "Playfair Display", Georgia, serif;
 
-  /* Jade palette */
-  --color-jade-50: #f0faf6;
-  --color-jade-100: #d4f1e4;
-  --color-jade-200: #a8e3c9;
-  --color-jade-300: #6dcda6;
-  --color-jade-400: #3db882;
-  --color-jade-500: #2a9d6e;
-  --color-jade-600: #1f7d57;
-  --color-jade-700: #1a6347;
-  --color-jade-800: #174f3a;
-  --color-jade-900: #143f30;
-  --color-jade-950: #0a2319;
+  /* Jade palette — verde petróleo alinhado ao logo */
+  --color-jade-50: #eef6f3;
+  --color-jade-100: #cfe5dc;
+  --color-jade-200: #9dccbd;
+  --color-jade-300: #63ad95;
+  --color-jade-400: #358c71;
+  --color-jade-500: #1A5C4A;
+  --color-jade-600: #154a3b;
+  --color-jade-700: #113d31;
+  --color-jade-800: #0e3128;
+  --color-jade-900: #0b2620;
+  --color-jade-950: #061712;
 
   /* Rose palette */
   --color-rose-50: #fff5f5;
@@ -223,22 +223,22 @@
 
   .gradient-mesh {
     background:
-      radial-gradient(ellipse at 20% 50%, rgba(212, 241, 228, 0.5) 0%, transparent 50%),
+      radial-gradient(ellipse at 20% 50%, rgba(207, 229, 220, 0.5) 0%, transparent 50%),
       radial-gradient(ellipse at 80% 20%, rgba(255, 224, 230, 0.4) 0%, transparent 50%),
       radial-gradient(ellipse at 50% 80%, rgba(255, 249, 240, 0.6) 0%, transparent 50%),
-      linear-gradient(135deg, #FFFDF9 0%, #f0faf6 50%, #fff5f5 100%);
+      linear-gradient(135deg, #FFFDF9 0%, #eef6f3 50%, #fff5f5 100%);
   }
 
   .gradient-mesh-alt {
     background:
-      radial-gradient(ellipse at 70% 30%, rgba(212, 241, 228, 0.4) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 30%, rgba(207, 229, 220, 0.4) 0%, transparent 50%),
       radial-gradient(ellipse at 30% 70%, rgba(255, 199, 211, 0.3) 0%, transparent 50%),
       radial-gradient(ellipse at 50% 50%, rgba(255, 253, 249, 0.8) 0%, transparent 60%),
-      linear-gradient(180deg, #fff5f5 0%, #FFFDF9 50%, #f0faf6 100%);
+      linear-gradient(180deg, #fff5f5 0%, #FFFDF9 50%, #eef6f3 100%);
   }
 
   .text-gradient-jade {
-    background: linear-gradient(135deg, #2a9d6e 0%, #1a6347 100%);
+    background: linear-gradient(135deg, #1A5C4A 0%, #113d31 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

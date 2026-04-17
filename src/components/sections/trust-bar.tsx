@@ -2,13 +2,14 @@
 
 import { motion } from "framer-motion";
 import { AnimatedCounter } from "@/components/shared/animated-counter";
-import { Award, Users, Calendar, Stethoscope } from "lucide-react";
+import { Award, Users, Calendar, Stethoscope, Microscope } from "lucide-react";
 
 const stats = [
   { icon: Award, value: null, label: "CRM-BA", suffix: "", prefix: "", display: "CRM-BA" },
   { icon: Calendar, value: 5, label: "Anos de Experiência", suffix: "+", prefix: "" },
-  { icon: Users, value: 2000, label: "Pacientes Atendidas", suffix: "+", prefix: "" },
-  { icon: Stethoscope, value: 500, label: "Cirurgias Realizadas", suffix: "+", prefix: "" },
+  { icon: Users, value: 7000, label: "Atendimentos", suffix: "+", prefix: "" },
+  { icon: Stethoscope, value: 600, label: "Cirurgias Realizadas", suffix: "+", prefix: "" },
+  { icon: Microscope, value: 300, label: "Histeroscopias", suffix: "+", prefix: "" },
 ];
 
 export function TrustBar() {
@@ -20,8 +21,8 @@ export function TrustBar() {
       {/* Subtle sweep — CSS animation */}
       <div className="absolute top-0 w-32 h-full bg-gradient-to-r from-transparent via-jade-400/5 to-transparent animate-shimmer pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-6">
           {stats.map((stat, i) => (
             <motion.div
               key={i}

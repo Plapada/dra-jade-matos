@@ -8,7 +8,7 @@ export function generatePhysicianSchema() {
     name: SITE_CONFIG.name,
     description: SITE_CONFIG.description,
     medicalSpecialty: "Gynecology",
-    image: `${SITE_CONFIG.url}/images/IMG_2354.jpg`,
+    image: `${SITE_CONFIG.url}/images/IMG_2425.jpg`,
     url: SITE_CONFIG.url,
     telephone: LOCATIONS[0].phone,
     address: LOCATIONS.map((loc) => ({
@@ -22,9 +22,11 @@ export function generatePhysicianSchema() {
     knowsAbout: [
       "Ginecologia",
       "Cirurgia Ginecológica",
-      "Pré-natal",
+      "Histeroscopia",
+      "Laparoscopia",
       "Saúde da Mulher",
       "Planejamento Familiar",
+      "Consulta Online",
     ],
   };
 }
@@ -51,7 +53,7 @@ export function generateLocalBusinessSchema() {
     name: SITE_CONFIG.name,
     description: SITE_CONFIG.description,
     url: SITE_CONFIG.url,
-    image: `${SITE_CONFIG.url}/images/IMG_2354.jpg`,
+    image: `${SITE_CONFIG.url}/images/IMG_2425.jpg`,
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",

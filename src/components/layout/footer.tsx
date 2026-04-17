@@ -12,13 +12,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="mb-4 relative h-14 w-40">
+            <div className="mb-4 relative h-20 w-56">
               <Image
                 src="/images/logo-light.png"
-                alt="Dra. Jade Matos - Ginecologista"
+                alt="Drª Jade Matos - Ginecologista"
                 fill
                 className="object-contain object-left"
-                sizes="160px"
+                sizes="224px"
               />
             </div>
             <p className="text-white/50 text-sm leading-relaxed mb-6">

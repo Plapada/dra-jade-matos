@@ -5,9 +5,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://drajadematos.com.br"),
-  title: "Dra. Jade Matos | Ginecologista em Salvador, BA",
+  title: "Drª Jade Matos | Ginecologista e Cirurgiã em Salvador, BA",
   description:
-    "Ginecologista e Cirurgiã Ginecológica em Salvador. Atendimento humanizado e acolhedor para todas as fases da vida da mulher. Agende sua consulta com a Dra. Jade Matos.",
+    "Ginecologista e Cirurgiã Ginecológica em Salvador. Atendimento humanizado para todas as fases da vida — do cuidado preventivo ao tratamento cirúrgico. Agende sua consulta com a Drª Jade Matos.",
   keywords: [
     "ginecologista salvador",
     "ginecologista bahia",
@@ -23,20 +23,20 @@ export const metadata: Metadata = {
     "planejamento familiar salvador",
     "exame preventivo salvador",
   ],
-  authors: [{ name: "Dra. Jade Matos" }],
-  creator: "Dra. Jade Matos",
+  authors: [{ name: "Drª Jade Matos" }],
+  creator: "Drª Jade Matos",
   openGraph: {
-    title: "Dra. Jade Matos | Ginecologista em Salvador, BA",
+    title: "Drª Jade Matos | Ginecologista em Salvador, BA",
     description:
       "Cuidado ginecológico humanizado e acolhedor em Salvador, BA. Agende sua consulta.",
     url: "https://drajadematos.com.br",
-    siteName: "Dra. Jade Matos - Ginecologista",
+    siteName: "Drª Jade Matos - Ginecologista",
     images: [
       {
-        url: "/images/IMG_2354.jpg",
+        url: "/images/IMG_2425.jpg",
         width: 800,
         height: 1067,
-        alt: "Dra. Jade Matos - Ginecologista em Salvador",
+        alt: "Drª Jade Matos - Ginecologista em Salvador",
       },
     ],
     locale: "pt_BR",
@@ -44,10 +44,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dra. Jade Matos | Ginecologista em Salvador",
+    title: "Drª Jade Matos | Ginecologista em Salvador",
     description:
       "Cuidado ginecológico humanizado e acolhedor em Salvador, BA.",
-    images: ["/images/IMG_2354.jpg"],
+    images: ["/images/IMG_2425.jpg"],
   },
   robots: {
     index: true,

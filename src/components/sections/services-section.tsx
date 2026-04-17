@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { Check, ArrowUpRight } from "lucide-react";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { services } from "@/data/services";
 import { WHATSAPP_URL } from "@/lib/constants";
@@ -16,44 +18,72 @@ export function ServicesSection() {
         <SectionHeading
           badge="Especialidades"
           title="Como posso cuidar de você"
-          subtitle="Serviços ginecológicos completos com atendimento humanizado e técnicas modernas"
+          subtitle="Atendimento ginecológico completo com técnica moderna e acolhimento humanizado"
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mt-4">
           {services.map((service, i) => (
-            <motion.div
+            <motion.article
               key={i}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{
-                delay: i * 0.08,
-                duration: 0.5,
+                delay: i * 0.1,
+                duration: 0.6,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="group glass rounded-2xl p-6 relative overflow-hidden cursor-pointer hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(42,157,110,0.12)] transition-all duration-300"
+              className="group relative overflow-hidden rounded-3xl bg-white/70 backdrop-blur-sm border border-jade-100/60 shadow-lg shadow-jade-900/5 hover:shadow-2xl hover:shadow-jade-900/10 hover:-translate-y-1 transition-all duration-500"
             >
-              {/* Hover gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-jade-500/5 to-rose-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              {/* Imagem topo */}
+              <div className="relative w-full h-60 sm:h-72 overflow-hidden">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-jade-950/40 via-transparent to-transparent" />
 
-              <div className="flex flex-col h-full relative z-10">
-                <div className="w-12 h-12 rounded-xl bg-jade-500/10 flex items-center justify-center mb-4 group-hover:bg-jade-500/20 group-hover:scale-110 transition-all duration-300">
-                  <service.icon className="h-6 w-6 text-jade-600 group-hover:text-jade-500 transition-colors" />
+                {/* Ícone sobreposto */}
+                <div className="absolute top-4 left-4 w-12 h-12 rounded-xl bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:bg-jade-500 transition-all duration-300">
+                  <service.icon className="h-6 w-6 text-jade-600 group-hover:text-white transition-colors" />
                 </div>
-                <h3 className="font-serif text-lg font-semibold text-navy-900 mb-2 group-hover:text-jade-800 transition-colors">
+              </div>
+
+              {/* Conteúdo */}
+              <div className="p-7 lg:p-8">
+                <h3 className="font-serif text-2xl lg:text-3xl font-semibold text-jade-900 mb-3 group-hover:text-jade-600 transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-sm text-navy-700/60 leading-relaxed flex-1">
+                <p className="text-base text-navy-700/70 leading-relaxed mb-5">
                   {service.description}
                 </p>
 
-                <div className="mt-4 flex items-center gap-1 text-jade-500 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                    Saiba mais →
-                  </a>
-                </div>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 mb-6">
+                  {service.bullets.map((bullet, j) => (
+                    <li
+                      key={j}
+                      className="flex items-start gap-2 text-sm text-navy-700/80"
+                    >
+                      <Check className="h-4 w-4 text-jade-500 mt-0.5 shrink-0" />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-jade-600 hover:text-jade-500 transition-colors group/cta"
+                >
+                  Agendar pelo WhatsApp
+                  <ArrowUpRight className="h-4 w-4 group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5 transition-transform" />
+                </a>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

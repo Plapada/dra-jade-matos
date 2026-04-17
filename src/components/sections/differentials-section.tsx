@@ -35,8 +35,8 @@ export function DifferentialsSection() {
           >
             <div className="relative w-full aspect-[3/4] max-w-sm mx-auto rounded-3xl overflow-hidden shadow-xl shadow-navy-900/10 group cursor-pointer">
               <Image
-                src="/images/IMG_2218.jpg"
-                alt="Dra. Jade Matos - profissional dedicada"
+                src="/images/IMG_2178.jpg"
+                alt="Drª Jade Matos - profissional dedicada"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 1024px) 384px, 320px"
