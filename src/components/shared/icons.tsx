@@ -1,6 +1,6 @@
 import type React from "react";
 
-export function UterusIcon({
+export function BisturiIcon({
   className,
   size = 24,
   strokeWidth = 1.5,
@@ -19,18 +19,14 @@ export function UterusIcon({
       className={className}
       {...props}
     >
-      {/* Corpo do útero */}
-      <path d="M9.5 21v-2.5C7.3 17.5 6 15.5 6 13.2C6 9.8 8.7 7 12 7C15.3 7 18 9.8 18 13.2C18 15.5 16.7 17.5 14.5 18.5V21" />
-      {/* Colo do útero */}
-      <path d="M9.5 21h5" />
-      {/* Tuba esquerda */}
-      <path d="M6.8 11.5C5.5 10.8 4 10.5 3 11.2" />
-      {/* Ovário esquerdo */}
-      <ellipse cx="3" cy="9.5" rx="1.3" ry="1.6" />
-      {/* Tuba direita */}
-      <path d="M17.2 11.5C18.5 10.8 20 10.5 21 11.2" />
-      {/* Ovário direito */}
-      <ellipse cx="21" cy="9.5" rx="1.3" ry="1.6" />
+      {/* Cabo */}
+      <line x1="2" y1="22" x2="11" y2="13" />
+      {/* Guarda (bolster) */}
+      <line x1="10" y1="11.5" x2="13" y2="14.5" />
+      {/* Dorso da lâmina */}
+      <line x1="12" y1="12" x2="21" y2="3" />
+      {/* Fio da lâmina (corte curvo) */}
+      <path d="M12 12 Q20.5 8 21 3" />
     </svg>
   );
 }
