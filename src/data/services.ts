@@ -1,4 +1,5 @@
-import { Stethoscope, Scissors, ShieldCheck, Video } from "lucide-react";
+import { Stethoscope, ShieldCheck, Video } from "lucide-react";
+import { UterusIcon } from "@/components/shared/icons";
 
 export const services = [
   {
@@ -15,7 +16,7 @@ export const services = [
     ],
   },
   {
-    icon: Scissors,
+    icon: UterusIcon,
     title: "Cirurgia Ginecológica",
     image: "/images/IMG_2354.jpg",
     description:
