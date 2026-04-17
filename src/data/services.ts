@@ -5,7 +5,7 @@ export const services = [
     icon: Stethoscope,
     title: "Consulta Ginecológica",
     image: "/images/IMG_2168.jpg",
-    imagePosition: "object-top",
+    imagePosition: "object-[60%_30%]",
     description:
       "Avaliação completa da saúde feminina em todas as fases da vida, com escuta atenta e sem julgamentos. Da primeira consulta da adolescente à transição da menopausa.",
     bullets: [
@@ -49,7 +49,7 @@ export const services = [
     icon: Video,
     title: "Consulta Online",
     image: "/images/IMG_20022.jpg",
-    imagePosition: "object-top",
+    imagePosition: "object-[50%_65%]",
     description:
       "Também realizo atendimentos particulares de forma online, para pacientes de qualquer lugar do Brasil. Mesmo cuidado acolhedor, no conforto da sua casa.",
     bullets: [
