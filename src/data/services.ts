@@ -35,7 +35,7 @@ export const services = [
     icon: ShieldCheck,
     title: "Planejamento Familiar",
     image: "/images/IMG_2279.jpg",
-    imagePosition: "object-center",
+    imagePosition: "object-[50%_20%]",
     description:
       "Orientação sobre os métodos contraceptivos mais indicados para você, com respeito às suas escolhas e momento de vida. Planejamento reprodutivo consciente e seguro.",
     bullets: [
@@ -49,7 +49,7 @@ export const services = [
     icon: Video,
     title: "Consulta Online",
     image: "/images/IMG_20022.jpg",
-    imagePosition: "object-[50%_65%]",
+    imagePosition: "object-top",
     description:
       "Também realizo atendimentos particulares de forma online, para pacientes de qualquer lugar do Brasil. Mesmo cuidado acolhedor, no conforto da sua casa.",
     bullets: [
