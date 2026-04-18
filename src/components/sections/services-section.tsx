@@ -41,7 +41,7 @@ export function ServicesSection() {
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="object-contain object-center group-hover:scale-[1.02] transition-transform duration-700"
+                  className={`object-cover ${service.imagePosition ?? "object-center"} group-hover:scale-[1.03] transition-transform duration-700`}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-jade-950/40 via-transparent to-transparent" />
