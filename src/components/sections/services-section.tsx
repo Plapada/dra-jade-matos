@@ -36,12 +36,12 @@ export function ServicesSection() {
               className="group relative overflow-hidden rounded-3xl bg-white/70 backdrop-blur-sm border border-jade-100/60 shadow-lg shadow-jade-900/5 hover:shadow-2xl hover:shadow-jade-900/10 hover:-translate-y-1 transition-all duration-500"
             >
               {/* Imagem topo */}
-              <div className="relative w-full h-44 sm:h-52 overflow-hidden bg-jade-50/40">
+              <div className="relative w-full h-52 sm:h-60 overflow-hidden bg-jade-50">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
-                  className={`object-cover ${service.imagePosition ?? "object-center"} group-hover:scale-[1.03] transition-transform duration-700`}
+                  className="object-contain object-center group-hover:scale-[1.02] transition-transform duration-700"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-jade-950/40 via-transparent to-transparent" />
