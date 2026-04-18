@@ -36,7 +36,7 @@ export function ServicesSection() {
               className="group relative overflow-hidden rounded-3xl bg-white/70 backdrop-blur-sm border border-jade-100/60 shadow-lg shadow-jade-900/5 hover:shadow-2xl hover:shadow-jade-900/10 hover:-translate-y-1 transition-all duration-500"
             >
               {/* Imagem topo */}
-              <div className="relative w-full h-72 sm:h-80 overflow-hidden bg-jade-50/40">
+              <div className="relative w-full h-44 sm:h-52 overflow-hidden bg-jade-50/40">
                 <Image
                   src={service.image}
                   alt={service.title}
