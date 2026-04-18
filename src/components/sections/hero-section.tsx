@@ -59,7 +59,7 @@ export function HeroSection() {
         className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[54vh] pb-10 lg:pt-28 lg:pb-16 will-change-transform"
       >
         {/* Mobile: full-width centered | Desktop: right-aligned 2-col */}
-        <div className="w-full max-w-2xl mx-auto lg:ml-auto text-center lg:text-right">
+        <div className="w-full max-w-2xl mx-auto lg:mx-0 lg:ml-auto text-center lg:text-right">
 
           {/* Glass card */}
           <div className="relative rounded-3xl
