@@ -24,7 +24,7 @@ export function HeroSection() {
     <section
       ref={ref}
       id="inicio"
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative min-h-screen flex items-end lg:items-center overflow-hidden"
     >
       {/* Foto full-screen com parallax */}
       <motion.div
@@ -32,119 +32,129 @@ export function HeroSection() {
         className="absolute inset-0 will-change-transform"
       >
         <Image
-          src="/images/expanded-image-1776470052360.png"
+          src="/images/expanded-image-1776471172257.png"
           alt="Drª Jade Matos - Ginecologista e Cirurgiã em Salvador, BA"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[18%_65%] lg:object-[40%_50%]"
           priority
           sizes="100vw"
         />
       </motion.div>
 
-      {/* Overlay escuro suave para legibilidade */}
-      <div className="absolute inset-0 bg-jade-950/30" />
+      {/* Desktop: overlay uniforme */}
+      <div className="absolute inset-0 hidden lg:block bg-jade-950/30" />
+
+      {/* Mobile: gradiente de baixo para cima — escurece onde fica o texto */}
+      <div className="absolute inset-0 lg:hidden bg-gradient-to-t from-jade-950/80 via-jade-950/15 to-transparent" />
 
       <div className="absolute inset-0 grain" />
 
-      {/* Floating elements */}
-      <div className="absolute top-1/4 right-[33%] w-4 h-4 rounded-full bg-jade-400/15 animate-float" />
-      <div className="absolute top-2/3 right-[8%] w-3 h-3 rounded-full bg-jade-300/20 animate-float-delayed" />
+      {/* Floating elements (desktop only) */}
+      <div className="absolute top-1/4 right-[33%] w-4 h-4 rounded-full bg-jade-400/15 animate-float hidden lg:block" />
+      <div className="absolute top-2/3 right-[8%] w-3 h-3 rounded-full bg-jade-300/20 animate-float-delayed hidden lg:block" />
 
-      {/* Content — agora alinhado à DIREITA */}
+      {/* Content */}
       <motion.div
         style={{ opacity, y: textY }}
-        className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 will-change-transform"
+        className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[54vh] pb-10 lg:pt-28 lg:pb-16 will-change-transform"
       >
-        <div className="max-w-2xl ml-auto text-right">
-          {/* Glass card behind text */}
-          <div className="relative rounded-3xl bg-white/20 backdrop-blur-2xl border border-white/40 shadow-[0_8px_60px_rgba(0,0,0,0.35)] ring-1 ring-white/10 px-8 py-10 lg:px-10 lg:py-12">
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 15, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jade-50/80 backdrop-blur-sm border border-jade-200/60 mb-6 relative overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shimmer" />
-            <span className="w-2 h-2 rounded-full bg-jade-500 animate-pulse-soft" />
-            <span className="text-xs font-semibold text-jade-700 uppercase tracking-wider relative z-10">
-              Ginecologista e Cirurgiã em Salvador
-            </span>
-          </motion.div>
+        {/* Mobile: full-width centered | Desktop: right-aligned 2-col */}
+        <div className="w-full max-w-2xl mx-auto lg:ml-auto text-center lg:text-right">
 
-          {/* Nome — destaque acima do título */}
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="font-serif text-2xl sm:text-3xl text-white/90 mb-4 italic"
-          >
-            Drª Jade Matos
-          </motion.p>
+          {/* Glass card */}
+          <div className="relative rounded-3xl
+            bg-jade-950/55 lg:bg-white/20
+            backdrop-blur-2xl
+            border border-white/25 lg:border-white/40
+            shadow-[0_8px_60px_rgba(0,0,0,0.40)]
+            ring-1 ring-white/10
+            px-6 py-8 lg:px-10 lg:py-12">
 
-          {/* Headline — word by word */}
-          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.15]">
-            {words.map((word, i) => (
-              <motion.span
-                key={i}
-                initial={{ opacity: 0, y: 25 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  delay: 0.3 + i * 0.07,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="inline-block mr-[0.3em]"
+            {/* Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 15, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-sm border border-white/30 mb-5 relative overflow-hidden"
+            >
+              <span className="w-2 h-2 rounded-full bg-jade-400 animate-pulse-soft" />
+              <span className="text-xs font-semibold text-white/90 uppercase tracking-wider relative z-10">
+                Ginecologista e Cirurgiã em Salvador
+              </span>
+            </motion.div>
+
+            {/* Nome */}
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              className="font-serif text-xl sm:text-2xl lg:text-3xl text-white/90 mb-3 italic"
+            >
+              Drª Jade Matos
+            </motion.p>
+
+            {/* Headline */}
+            <h1 className="font-serif text-2xl sm:text-3xl lg:text-5xl font-bold text-white tracking-tight leading-[1.15]">
+              {words.map((word, i) => (
+                <motion.span
+                  key={i}
+                  initial={{ opacity: 0, y: 25 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.3 + i * 0.07,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className="inline-block mr-[0.3em]"
+                >
+                  {word}
+                </motion.span>
+              ))}
+            </h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 25 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.5, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              className="mt-4 text-base lg:text-lg text-white/75 leading-relaxed mx-auto lg:ml-auto max-w-sm lg:max-w-lg"
+            >
+              Atendimento com acolhimento, respeito e confiança. Cada mulher
+              é única e merece um cuidado personalizado, sem pressa e sem julgamentos.
+            </motion.p>
+
+            {/* CTAs */}
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.8, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              className="mt-6 flex flex-col sm:flex-row gap-3 justify-center lg:justify-end"
+            >
+              <MagneticButton
+                as="a"
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="items-center justify-center gap-2 px-7 py-3.5 bg-jade-500 text-white font-semibold rounded-full hover:bg-jade-600 transition-all duration-300 hover:shadow-xl hover:shadow-jade-500/25"
               >
-                {word}
-              </motion.span>
-            ))}
-          </h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.5, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-6 text-lg text-white/80 leading-relaxed max-w-lg ml-auto"
-          >
-            Atendimento com acolhimento, respeito e confiança. Cada mulher
-            é única e merece um cuidado personalizado, sem pressa e sem
-            julgamentos.
-          </motion.p>
-
-          {/* CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.8, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-8 flex flex-col sm:flex-row gap-4 sm:justify-end"
-          >
-            <MagneticButton
-              as="a"
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="items-center justify-center gap-2 px-8 py-4 bg-jade-500 text-white font-semibold rounded-full hover:bg-jade-600 transition-all duration-300 hover:shadow-xl hover:shadow-jade-500/25"
-            >
-              Agende sua Consulta
-            </MagneticButton>
-            <MagneticButton
-              as="a"
-              href="#especialidades"
-              className="items-center justify-center gap-2 px-8 py-4 bg-white/70 backdrop-blur-sm border border-jade-200/50 text-jade-700 font-semibold rounded-full hover:bg-white hover:border-jade-300 transition-all duration-300"
-            >
-              Conheça Meus Serviços
-            </MagneticButton>
-          </motion.div>
-          </div>{/* fim glass card */}
+                Agende sua Consulta
+              </MagneticButton>
+              <MagneticButton
+                as="a"
+                href="#especialidades"
+                className="items-center justify-center gap-2 px-7 py-3.5 bg-white/15 backdrop-blur-sm border border-white/30 text-white font-semibold rounded-full hover:bg-white/25 transition-all duration-300"
+              >
+                Conheça Meus Serviços
+              </MagneticButton>
+            </motion.div>
+          </div>
         </div>
 
-        {/* Floating badge */}
+        {/* Floating badge — desktop only */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 2, duration: 0.7 }}
-          className="absolute bottom-20 left-6 sm:left-12 glass-strong rounded-2xl px-4 py-3 shadow-lg hidden sm:block animate-float"
+          className="absolute bottom-20 left-6 sm:left-12 glass-strong rounded-2xl px-4 py-3 shadow-lg hidden lg:block animate-float"
         >
           <p className="text-xs font-semibold text-jade-800">
             ✨ Cirurgia Ginecológica
@@ -160,13 +170,13 @@ export function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2.5 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 hidden lg:flex"
       >
-        <span className="text-[10px] uppercase tracking-widest text-jade-700/40">
+        <span className="text-[10px] uppercase tracking-widest text-white/40">
           Role para descobrir
         </span>
         <ArrowDown
-          className="h-4 w-4 text-jade-700/40"
+          className="h-4 w-4 text-white/40"
           style={{ animation: "scroll-hint 2s ease-in-out infinite" }}
         />
       </motion.div>
