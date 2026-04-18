@@ -41,8 +41,8 @@ export function Header() {
           className={cn(
             "max-w-7xl mx-auto rounded-2xl transition-all duration-500",
             scrolled
-              ? "glass-strong shadow-xl shadow-black/10 py-3 px-6"
-              : "backdrop-blur-md bg-white/40 border border-jade-200/40 shadow-lg shadow-jade-900/5 py-3 px-6"
+              ? "glass-strong shadow-xl shadow-black/10 py-2 px-6"
+              : "backdrop-blur-md bg-white/40 border border-jade-200/40 shadow-lg shadow-jade-900/5 py-2 px-6"
           )}
         >
           <div className="flex items-center justify-between">
@@ -50,7 +50,7 @@ export function Header() {
             <motion.a
               href="#"
               whileHover={{ scale: 1.02 }}
-              className="relative h-20 w-60 md:h-24 md:w-72"
+              className="relative h-12 w-36 md:h-14 md:w-44"
             >
               <Image
                 src="/images/logo-jade.png"

@@ -24,7 +24,7 @@ export function HeroSection() {
     <section
       ref={ref}
       id="inicio"
-      className="relative min-h-screen flex items-end overflow-hidden"
+      className="relative min-h-screen flex items-center overflow-hidden"
     >
       {/* Foto full-screen com parallax */}
       <motion.div
@@ -53,7 +53,7 @@ export function HeroSection() {
       {/* Content — agora alinhado à DIREITA */}
       <motion.div
         style={{ opacity, y: textY }}
-        className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 pt-40 will-change-transform"
+        className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 will-change-transform"
       >
         <div className="max-w-2xl ml-auto text-right">
           {/* Glass card behind text */}
