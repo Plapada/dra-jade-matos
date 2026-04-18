@@ -57,7 +57,7 @@ export function HeroSection() {
       >
         <div className="max-w-2xl ml-auto text-right">
           {/* Glass card behind text */}
-          <div className="relative rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl shadow-jade-950/20 px-8 py-10 lg:px-10 lg:py-12">
+          <div className="relative rounded-3xl bg-white/20 backdrop-blur-2xl border border-white/40 shadow-[0_8px_60px_rgba(0,0,0,0.35)] ring-1 ring-white/10 px-8 py-10 lg:px-10 lg:py-12">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 15, scale: 0.9 }}
