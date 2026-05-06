@@ -80,6 +80,13 @@ export default function RootLayout({
       className={`${playfair.variable} ${dmSans.variable} h-full antialiased`}
     >
       <head>
+        {/* Preload da foto do hero — começa a baixar antes de qualquer JS */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero-jade-couch.png"
+          fetchPriority="high"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

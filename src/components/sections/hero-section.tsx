@@ -32,12 +32,14 @@ export function HeroSection() {
         className="absolute inset-0 will-change-transform"
       >
         <Image
-          src="/images/IMG_2425.jpg"
+          src="/images/hero-jade-couch.png"
           alt="Drª Jade Matos - Ginecologista e Cirurgiã em Salvador, BA"
           fill
-          className="object-cover object-[18%_65%] lg:object-[28%_50%]"
+          className="object-cover object-[20%_50%] lg:object-[15%_50%]"
           priority
-          quality={95}
+          fetchPriority="high"
+          quality={100}
+          unoptimized
           sizes="100vw"
         />
       </motion.div>
