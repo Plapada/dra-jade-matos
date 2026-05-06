@@ -32,22 +32,21 @@ export function HeroSection() {
         className="absolute inset-0 will-change-transform"
       >
         <Image
-          src="/images/expanded-image-1776471172257.png"
+          src="/images/IMG_2425.jpg"
           alt="Drª Jade Matos - Ginecologista e Cirurgiã em Salvador, BA"
           fill
-          className="object-cover object-[18%_65%] lg:object-[40%_50%]"
+          className="object-cover object-[18%_65%] lg:object-[28%_50%]"
           priority
+          quality={95}
           sizes="100vw"
         />
       </motion.div>
 
-      {/* Desktop: overlay uniforme */}
-      <div className="absolute inset-0 hidden lg:block bg-jade-950/30" />
+      {/* Desktop: overlay leve — preserva nitidez da foto */}
+      <div className="absolute inset-0 hidden lg:block bg-jade-950/20" />
 
       {/* Mobile: gradiente de baixo para cima — escurece onde fica o texto */}
       <div className="absolute inset-0 lg:hidden bg-gradient-to-t from-jade-950/80 via-jade-950/15 to-transparent" />
-
-      <div className="absolute inset-0 grain" />
 
       {/* Floating elements (desktop only) */}
       <div className="absolute top-1/4 right-[33%] w-4 h-4 rounded-full bg-jade-400/15 animate-float hidden lg:block" />
@@ -83,18 +82,18 @@ export function HeroSection() {
               </span>
             </motion.div>
 
-            {/* Nome */}
+            {/* Nome — aumentado em relação ao subtítulo (hierarquia da identidade) */}
             <motion.p
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="font-serif text-xl sm:text-2xl lg:text-3xl text-white/90 mb-3 italic"
+              className="font-serif text-3xl sm:text-4xl lg:text-5xl text-white mb-4 italic font-medium"
             >
               Drª Jade Matos
             </motion.p>
 
-            {/* Headline */}
-            <h1 className="font-serif text-2xl sm:text-3xl lg:text-5xl font-bold text-white tracking-tight leading-[1.15]">
+            {/* Headline — fonte ligeiramente reduzida para o nome se destacar */}
+            <h1 className="font-serif text-xl sm:text-2xl lg:text-[2.4rem] font-semibold text-white/95 tracking-tight leading-[1.2]">
               {words.map((word, i) => (
                 <motion.span
                   key={i}

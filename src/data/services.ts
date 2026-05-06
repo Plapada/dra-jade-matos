@@ -21,7 +21,7 @@ export const services = [
     image: "/images/expanded-image-1776477477660.png",
     imagePosition: "object-center",
     description:
-      "Cirurgiã com foco em técnicas minimamente invasivas. Histeroscopia e laparoscopia para preservar o máximo de tecido saudável e acelerar sua recuperação.",
+      "Cirurgiã com foco em técnicas minimamente invasivas. Histeroscopia e laparoscopia conduzidas com precisão para uma recuperação mais tranquila e segura.",
     bullets: [
       "Histeroscopia",
       "Histerectomia",

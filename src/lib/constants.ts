@@ -42,7 +42,6 @@ export const LOCATIONS = [
 export const NAV_LINKS = [
   { label: "Sobre", href: "#sobre" },
   { label: "Especialidades", href: "#especialidades" },
-  { label: "Diferenciais", href: "#diferenciais" },
   { label: "Depoimentos", href: "#depoimentos" },
   { label: "FAQ", href: "#faq" },
   { label: "Localização", href: "#localizacao" },

@@ -41,23 +41,23 @@ export function Header() {
           className={cn(
             "max-w-7xl mx-auto rounded-2xl transition-all duration-500",
             scrolled
-              ? "glass-strong shadow-xl shadow-black/10 py-2 px-6"
-              : "backdrop-blur-md bg-white/40 border border-jade-200/40 shadow-lg shadow-jade-900/5 py-2 px-6"
+              ? "glass-strong shadow-xl shadow-black/10 py-1.5 px-4 lg:px-6"
+              : "backdrop-blur-md bg-white/40 border border-jade-200/40 shadow-lg shadow-jade-900/5 py-1.5 px-4 lg:px-6"
           )}
         >
           <div className="flex items-center justify-between">
-            {/* Logo */}
+            {/* Logo — proporção ajustada para preencher melhor a barra */}
             <motion.a
               href="#"
               whileHover={{ scale: 1.02 }}
-              className="relative h-12 w-36 md:h-14 md:w-44"
+              className="relative h-16 w-48 md:h-20 md:w-60 lg:h-24 lg:w-72 -my-2"
             >
               <Image
                 src="/images/logo-jade.png"
                 alt="Drª Jade Matos - Ginecologista"
                 fill
                 className="object-contain object-left"
-                sizes="288px"
+                sizes="(max-width: 768px) 192px, (max-width: 1024px) 240px, 288px"
                 priority
               />
             </motion.a>

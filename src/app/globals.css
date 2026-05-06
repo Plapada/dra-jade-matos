@@ -12,18 +12,18 @@
   --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
   --font-heading: "Playfair Display", Georgia, serif;
 
-  /* Jade palette — verde petróleo alinhado ao logo */
-  --color-jade-50: #eef6f3;
-  --color-jade-100: #cfe5dc;
-  --color-jade-200: #9dccbd;
-  --color-jade-300: #63ad95;
-  --color-jade-400: #358c71;
-  --color-jade-500: #1A5C4A;
-  --color-jade-600: #154a3b;
-  --color-jade-700: #113d31;
-  --color-jade-800: #0e3128;
-  --color-jade-900: #0b2620;
-  --color-jade-950: #061712;
+  /* Jade palette — ancorada em #186040 (verde petróleo exato do logo) */
+  --color-jade-50: #edf5f0;
+  --color-jade-100: #cee4d8;
+  --color-jade-200: #9bcab2;
+  --color-jade-300: #5eaa87;
+  --color-jade-400: #2f8a64;
+  --color-jade-500: #186040;
+  --color-jade-600: #134e33;
+  --color-jade-700: #0f3d29;
+  --color-jade-800: #0c3022;
+  --color-jade-900: #08251a;
+  --color-jade-950: #051710;
 
   /* Rose palette */
   --color-rose-50: #fff5f5;
@@ -238,7 +238,7 @@
   }
 
   .text-gradient-jade {
-    background: linear-gradient(135deg, #1A5C4A 0%, #113d31 100%);
+    background: linear-gradient(135deg, #186040 0%, #0f3d29 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
