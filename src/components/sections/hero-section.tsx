@@ -31,11 +31,23 @@ export function HeroSection() {
         style={{ y }}
         className="absolute inset-0 will-change-transform"
       >
+        {/* Mobile: foto profissional original em alta resolução (4160×6240) */}
+        <Image
+          src="/images/IMG_2425.jpg"
+          alt="Drª Jade Matos - Ginecologista e Cirurgiã em Salvador, BA"
+          fill
+          className="lg:hidden object-cover object-[30%_30%]"
+          priority
+          fetchPriority="high"
+          quality={95}
+          sizes="100vw"
+        />
+        {/* Desktop: composição com sofá/abajur */}
         <Image
           src="/images/hero-jade-couch.jpg"
           alt="Drª Jade Matos - Ginecologista e Cirurgiã em Salvador, BA"
           fill
-          className="object-cover object-[8%_50%] lg:object-[15%_50%]"
+          className="hidden lg:block object-cover object-[15%_50%]"
           priority
           fetchPriority="high"
           quality={100}
