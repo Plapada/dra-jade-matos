@@ -84,7 +84,7 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="/images/hero-jade-couch.png"
+          href="/images/hero-jade-couch.jpg"
           fetchPriority="high"
         />
         <script
