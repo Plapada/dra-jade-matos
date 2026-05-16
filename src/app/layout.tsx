@@ -33,10 +33,11 @@ export const metadata: Metadata = {
     siteName: "Drª Jade Matos - Ginecologista",
     images: [
       {
-        url: "/images/IMG_2425.jpg",
-        width: 800,
-        height: 1067,
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
         alt: "Drª Jade Matos - Ginecologista em Salvador",
+        type: "image/jpeg",
       },
     ],
     locale: "pt_BR",
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     title: "Drª Jade Matos | Ginecologista em Salvador",
     description:
       "Cuidado ginecológico humanizado e acolhedor em Salvador, BA.",
-    images: ["/images/IMG_2425.jpg"],
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
